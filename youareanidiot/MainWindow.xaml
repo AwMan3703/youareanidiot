@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:youareanidiot"
         mc:Ignorable="d"
         Title="Oh, hello there! :)" Height="450" Width="800"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" Topmost="True">
         <MediaElement Name="VideoControl" Height="450" Width="800" Source="Resources/sherk.wmv" MediaEnded="VideoControl_OnMediaEnded" />
 </Window>
