@@ -10,4 +10,3 @@ namespace youareanidiot;
 public partial class App : Application
 {
 }
-
