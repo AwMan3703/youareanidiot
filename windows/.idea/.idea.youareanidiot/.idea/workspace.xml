@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7ee0c53-93eb-4c8d-adc7-c2f0a253de37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../macos/youareanidiot-macos/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../macos/youareanidiot-macos/AppDelegate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../macos/youareanidiot-macos/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/../macos/youareanidiot-macos/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../macos/youareanidiot-macos/ViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../macos/youareanidiot-macos/ViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mac/youareanidiot-mac.xcodeproj/project.xcworkspace/xcuserdata/danielebrambilla.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../mac/youareanidiot-mac.xcodeproj/project.xcworkspace/xcuserdata/danielebrambilla.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,23 +15,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2e32HvXBmTjAXAb1F0CTks7G6zn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="youareanidiot" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -63,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711118856247</updated>
       <workItem from="1711118857566" duration="21000" />
+      <workItem from="1711368547669" duration="54000" />
     </task>
     <servers />
   </component>
