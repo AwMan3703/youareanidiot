@@ -25,11 +25,21 @@ public partial class MainWindow : Window
 
     private void OnWindowClosing(object? sender, CancelEventArgs e)
     {
-        Console.WriteLine("shouldn't have closed that");
-        MainWindow window2 = new MainWindow();
-        MainWindow window3 = new MainWindow();
-        window2.Show();
-        window3.Show();
+        if (!App.DoResurrectWindows)
+        {
+            Console.WriteLine("Executable is configured to not resurrect windows");
+            return;
+        }
+        
+        for (int i = 0; i < App.ResurrectedWindowsPerOneDead; i++)
+        {
+            MainWindow andanotherone = new MainWindow();
+            andanotherone.Show();
+        }
+        
+        int newWindowCount = App.LoadWindowCount() + App.ResurrectedWindowsPerOneDead - 1;
+        App.SaveWindowCount(newWindowCount);
+        Console.WriteLine($"Shouldn't have closed that! Window count is now {newWindowCount}");
     }
 
     private void VideoControl_OnMediaEnded(object sender, RoutedEventArgs e)
