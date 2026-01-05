@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7ee0c53-93eb-4c8d-adc7-c2f0a253de37" name="Changes" comment="whatever that is">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.youareanidiot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.youareanidiot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youareanidiot/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youareanidiot/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youareanidiot/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/MainWindow.xaml.cs" afterDir="false" />
-    </list>
+    <list default="true" id="a7ee0c53-93eb-4c8d-adc7-c2f0a253de37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +20,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/youareanidiot/obj/Debug/net8.0-windows/App.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Daniele/RiderProjects/youareanidiot/youareanidiot/App.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Daniele/RiderProjects/youareanidiot/youareanidiot/App.xaml" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -67,9 +62,12 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/youareanidiot/youareanidiot.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
@@ -92,7 +90,7 @@
       <workItem from="1711118857566" duration="21000" />
       <workItem from="1711368547669" duration="54000" />
       <workItem from="1767468516958" duration="8842000" />
-      <workItem from="1767478170315" duration="4670000" />
+      <workItem from="1767478170315" duration="5547000" />
     </task>
     <task id="LOCAL-00001" summary="remove macos version">
       <option name="closed" value="true" />
@@ -118,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767468634549</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="App now resists Task Manager kill. See README.md for how to terminate it anyway">
+      <option name="closed" value="true" />
+      <created>1767483516531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1767483516531</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +139,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="remove macos version" />
     <MESSAGE value="whatever that is" />
-    <option name="LAST_COMMIT_MESSAGE" value="whatever that is" />
+    <MESSAGE value="App now resists Task Manager kill. See README.md for how to terminate it anyway" />
+    <option name="LAST_COMMIT_MESSAGE" value="App now resists Task Manager kill. See README.md for how to terminate it anyway" />
   </component>
 </project>
