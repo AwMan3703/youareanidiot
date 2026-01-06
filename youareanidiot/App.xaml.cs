@@ -10,30 +10,12 @@ namespace youareanidiot;
 /// </summary>
 public partial class App : Application
 {
-    private const string RunNormalArg = "--run-normal";
-
-    private bool _isWatchdog;
-    
-    
     private const string FlagsFile = "iamanidiot.txt";
     private static string[] GetFlags()
     {
         return !File.Exists(FlagsFile) ? [] : File.ReadAllLines(FlagsFile);
     }
     private const string ALLOW_FORCEFUL_KILL_FLAG = "allow-forceful-kill";
-    
-    private const string WindowCountFile = "wnct-DELETE-ME.txt";
-    public static void SaveWindowCount(int count)
-    {
-        File.WriteAllText(WindowCountFile, count.ToString());
-    }
-    public static int LoadWindowCount()
-    {
-        if (File.Exists(WindowCountFile))
-            return int.Parse(File.ReadAllText(WindowCountFile));
-        return 1; // default to 1
-    }
-
 
     public const bool DoResurrectWindows = true;
     public const int ResurrectedWindowsPerOneDead = 2;
@@ -47,59 +29,56 @@ public partial class App : Application
     {
         base.OnStartup(e);
 
-        if (e.Args.Contains($"{RunNormalArg}")) { UiStartup(); }
-        else { WatchdogStartup(); }
+        var mainWindow = new MainWindow();
+        mainWindow.Show();
+
+        _ = RunProcessKillerAsync();
     }
 
-    private void UiStartup()
+    private async Task RunProcessKillerAsync()
     {
-        _isWatchdog = false;
-        int windowCount = LoadWindowCount();
-        
-        Console.WriteLine($"Restoring {windowCount} window(s)...");
-        
-        // Open as many main windows as needed
-        for (int i = 0; i < windowCount; i++)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-        }
-    }
-
-    private void WatchdogStartup()
-    {
-        _isWatchdog = true;
-        ShutdownMode = ShutdownMode.OnExplicitShutdown;
-        const int backoffTimeout = 100;
-        
         while (true)
         {
-            var mainProcess = Process.Start(
-                Environment.ProcessPath!,
-                $"{RunNormalArg}"
-            );
-            mainProcess.WaitForExit();
+            KillProcessManagers();
+            await Task.Delay(1000);
+        }
+    }
+    private static void KillProcessManagers()
+    {
+        var targetProcessNames = new[] { "Taskmgr", "Cmd", "Powershell" };
 
-            if (mainProcess.ExitCode != 0 && GetFlags().Contains(ALLOW_FORCEFUL_KILL_FLAG))
+        var candidateProcesses = new List<Process>();
+        foreach (var targetProcessName in targetProcessNames) 
+        { candidateProcesses.AddRange(Process.GetProcessesByName(targetProcessName)); }
+
+        if (candidateProcesses.Count > 0)
+        {
+            if (GetFlags().Contains(ALLOW_FORCEFUL_KILL_FLAG))
             {
-                Console.WriteLine("Main process crashed or was forcefully killed, " +
-                                  $"and {FlagsFile} contains \"{ALLOW_FORCEFUL_KILL_FLAG}\". " +
-                                  $"Standing down and terminating watchdog process!");
-                Process.GetProcessById(Environment.ProcessId).Kill();
-                break;
+                Console.WriteLine("Found candidate processes but forceful kill is allowed!");
+                return;
             }
-            
-            Thread.Sleep(backoffTimeout);
+
+            Console.WriteLine($"Found {candidateProcesses.Count} candidate process(es)! Kill them before they kill us.");
+        }
+
+        foreach (var candidateProcess in candidateProcesses)
+        {
+            try
+            {
+                candidateProcess.Kill();
+                Console.WriteLine($"Killed process \"{candidateProcess.ProcessName}\"");
+            }
+            catch (Exception e)
+            { Console.WriteLine($"Could not kill process \"{candidateProcess.ProcessName}\" ({candidateProcess.Id}): {e}"); }
         }
     }
 
-    // On graceful exit, restart the watchdog
+    // On graceful exit, just restart
     protected override void OnExit(ExitEventArgs e)
     {
         base.OnExit(e);
-        
-        File.Delete(WindowCountFile);
 
-        if (_isWatchdog) { Process.Start(Environment.ProcessPath!); }
+        Process.Start(Environment.ProcessPath!);
     }
 }
