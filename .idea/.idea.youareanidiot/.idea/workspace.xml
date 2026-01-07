@@ -7,7 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7ee0c53-93eb-4c8d-adc7-c2f0a253de37" name="Changes" comment="" />
+    <list default="true" id="a7ee0c53-93eb-4c8d-adc7-c2f0a253de37" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.youareanidiot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.youareanidiot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/youareanidiot/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/FileContentIndex/1deff5fd-68e7-4228-bfc6-b1017115035b.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/FileContentIndex/52f78d04-fea3-42e0-9ab5-b31cf9cf0d3d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml.user" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml.user" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,24 +59,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.youareanidiot.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.youareanidiot.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.youareanidiot">
     <configuration name="youareanidiot: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="4478265060568351524" uuid_low="-5205598764325927361" />
@@ -110,6 +117,7 @@
       <workItem from="1767468516958" duration="8842000" />
       <workItem from="1767478170315" duration="5547000" />
       <workItem from="1767652740858" duration="7199000" />
+      <workItem from="1767795068289" duration="429000" />
     </task>
     <task id="LOCAL-00001" summary="remove macos version">
       <option name="closed" value="true" />
@@ -167,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767661112832</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="thing">
+      <option name="closed" value="true" />
+      <created>1767661584321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1767661584321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +213,8 @@
     <MESSAGE value="stuff" />
     <MESSAGE value="Now blocking Task Manager and taskkill commands instead of having a watchdog process" />
     <MESSAGE value="whatever" />
-    <option name="LAST_COMMIT_MESSAGE" value="whatever" />
+    <MESSAGE value="thing" />
+    <option name="LAST_COMMIT_MESSAGE" value="thing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
