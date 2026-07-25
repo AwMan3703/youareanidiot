@@ -11,28 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7ee0c53-93eb-4c8d-adc7-c2f0a253de37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/youareanidiot/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/youareanidiot/Properties/Settings.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/youareanidiot/Properties/Settings.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.youareanidiot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.youareanidiot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.metadata.v10.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.metadata.v10.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.metadata.v9.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.projects.v10.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.projects.v10.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.projects.v9.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.strings.v10.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.strings.v10.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/youareanidiot.strings.v9.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/youareanidiot/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/FileContentIndex/ee57f635-f08b-4600-a08a-2a4d26a7196e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/v18/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/youareanidiot/v18/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/v18/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/youareanidiot/v18/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/v18/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/youareanidiot/v18/DocumentLayout.backup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/youareanidiot/v18/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/youareanidiot/v18/DocumentLayout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youareanidiot/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/App.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youareanidiot/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/App.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youareanidiot/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml.user" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/Properties/PublishProfiles/FolderProfile.pubxml.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youareanidiot/youareanidiot.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/youareanidiot/youareanidiot.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +247,9 @@
     <MESSAGE value="Now blocking Task Manager and taskkill commands instead of having a watchdog process" />
     <MESSAGE value="whatever" />
     <MESSAGE value="thing" />
-    <option name="LAST_COMMIT_MESSAGE" value="thing" />
+    <MESSAGE value="IDE stuff" />
+    <MESSAGE value="Added WPF settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added WPF settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
