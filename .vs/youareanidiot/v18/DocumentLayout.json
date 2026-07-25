@@ -1,12 +1,51 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Daniele\\RiderProjects\\youareanidiot\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E25FE58-8138-4324-B7C1-FF811924063F}|youareanidiot\\youareanidiot.csproj|c:\\users\\daniele\\riderprojects\\youareanidiot\\youareanidiot\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{3E25FE58-8138-4324-B7C1-FF811924063F}|youareanidiot\\youareanidiot.csproj|solutionrelative:youareanidiot\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E25FE58-8138-4324-B7C1-FF811924063F}|youareanidiot\\youareanidiot.csproj|c:\\users\\daniele\\riderprojects\\youareanidiot\\youareanidiot\\youareanidiot.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3E25FE58-8138-4324-B7C1-FF811924063F}|youareanidiot\\youareanidiot.csproj|solutionrelative:youareanidiot\\youareanidiot.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\Daniele\\RiderProjects\\youareanidiot\\youareanidiot\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "youareanidiot\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\Daniele\\RiderProjects\\youareanidiot\\youareanidiot\\Properties\\Settings.settings",
+              "RelativeToolTip": "youareanidiot\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2026-07-24T17:02:13.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "youareanidiot",
+              "DocumentMoniker": "C:\\Users\\Daniele\\RiderProjects\\youareanidiot\\youareanidiot\\youareanidiot.csproj",
+              "RelativeDocumentMoniker": "youareanidiot\\youareanidiot.csproj",
+              "ToolTip": "C:\\Users\\Daniele\\RiderProjects\\youareanidiot\\youareanidiot\\youareanidiot.csproj",
+              "RelativeToolTip": "youareanidiot\\youareanidiot.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-24T17:02:03.844Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
