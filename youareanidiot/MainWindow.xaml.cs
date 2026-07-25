@@ -14,21 +14,9 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void OnWindowClosing(object? sender, CancelEventArgs e)
+    private static void OnWindowClosing(object? sender, CancelEventArgs e)
     {
-        if (!App.DoResurrectWindows)
-        {
-            Console.WriteLine("Executable is configured to not resurrect windows");
-            return;
-        }
-        
-        Console.WriteLine($"Shouldn't have closed that! Resurrecting {App.ResurrectedWindowsPerOneDead} new windows...");
-        
-        for (int i = 0; i < App.ResurrectedWindowsPerOneDead; i++)
-        {
-            MainWindow andanotherone = new MainWindow();
-            andanotherone.Show();
-        }
+        ((App) Application.Current).AWindowWasClosed();
     }
 
     private void VideoControl_OnMediaEnded(object sender, RoutedEventArgs e)
