@@ -113,6 +113,38 @@ public partial class App : Application
         return youareanidiot.Properties.Settings.Default.WindowCount;
     }
 
+    private static bool AddAutoRunRegistryEntry()
+    {
+        string? processPath = Environment.ProcessPath;
+        if (processPath == null)
+        {
+            Console.WriteLine("Couldn't determine the process path, aborting registry edit.");
+            return false;
+        }
+    
+        using RegistryKey key = Registry.CurrentUser.CreateSubKey(AutoLaunchRegistryKeyPath);
+        key.SetValue(AutoLaunchRegistryValueName, processPath, RegistryValueKind.String);
+        Console.WriteLine("Auto-run registry entry added.");
+        return true;
+    }
+    private static bool RemoveAutoRunRegistryEntry()
+    {
+        using RegistryKey? key = Registry.CurrentUser.OpenSubKey(AutoLaunchRegistryKeyPath, true);
+        if (key == null)  { return false; }
+
+        key.DeleteValue(AutoLaunchRegistryValueName, false);
+        Console.WriteLine("Auto-run registry entry removed.");
+        return true;
+    }
+    private static bool HasAutoRunRegistryEntry()
+    {
+        using RegistryKey? key = Registry.CurrentUser.OpenSubKey(AutoLaunchRegistryKeyPath);
+        if (key == null) { return false; }
+
+        object? autoLaunchValue = key.GetValue(AutoLaunchRegistryValueName);
+        if (autoLaunchValue == null || (string) autoLaunchValue != Environment.ProcessPath) { return false; }
+        return true;
+    }
     
     // Kill threat processes
     
@@ -165,5 +197,11 @@ public partial class App : Application
         }
         
         Process.Start(Environment.ProcessPath!);
+    }
+
+    // On session ending (user logging off or rebooting) prevent window count from increasing
+    private void OnSessionEnding(object sender, SessionEndingCancelEventArgs e)
+    {
+        IsSessionEnding = true;
     }
 }
