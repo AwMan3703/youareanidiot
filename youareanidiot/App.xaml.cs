@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using Microsoft.Win32;
 
 namespace youareanidiot;
 
@@ -93,6 +94,25 @@ public partial class App : Application
         }
     }
     
+    // Persist state
+
+    public static void IncreaseWindowCount(int amount = 1)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegative(amount);
+        youareanidiot.Properties.Settings.Default.WindowCount += amount;
+        youareanidiot.Properties.Settings.Default.Save();
+        Console.WriteLine("Window count increased to " + youareanidiot.Properties.Settings.Default.WindowCount);
+    }
+    private static void ResetWindowCount()
+    {
+        youareanidiot.Properties.Settings.Default.WindowCount = 0;
+        youareanidiot.Properties.Settings.Default.Save();
+    }
+    private static int GetWindowCount()
+    {
+        return youareanidiot.Properties.Settings.Default.WindowCount;
+    }
+
     
     // Kill threat processes
     
