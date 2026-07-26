@@ -165,14 +165,14 @@ public partial class App : Application
         if (candidateProcesses.Count <= 0)
         { return; }
 
+        Console.Write($"Found {candidateProcesses.Count} disallowed process(es)");
         if (IsKillSwitchActive())
         {
-            Console.WriteLine("Found candidate processes, but kill-switch is active!");
+            Console.WriteLine(", but kill-switch is active!");
             return;
         }
+        Console.WriteLine(". It's kill or be killed!");
 
-        Console.WriteLine($"Found {candidateProcesses.Count} candidate process(es). It's kill or be killed!");
-            
         foreach (var candidateProcess in candidateProcesses)
         {
             try
